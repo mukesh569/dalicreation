@@ -4,14 +4,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home| Dali Event</title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/slider.css">
-<script src="js/slider.js" type="text/javascript" ></script>
+	<title>Home | Dali Event</title>
 	
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/owl.carousel.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">	
 	
 </head>
 <body>
@@ -24,7 +27,7 @@
 			<i class="fas fa-bars"></i>
 		</div>
 		<ul>
-			<li><a href="#">home</a></li>
+			<li><a href="www.facebook.com" target="_bbb">home</a></li>
 			<li><a href="#">photography</a></li>
 			<li><a href="#">decoration</a></li>
 			<li><a href="#">event</a></li>
@@ -35,43 +38,147 @@
 	
 	</header>
 	
-	<section class="slider">
-		<div id="ninja-slider">
-        <div class="slider-inner">
-            <ul>
-                <li>
-                    <a class="ns-img" href="img/1.jpg"></a>
-                    <div class="caption">Pre-Wedding View </div>
-                </li>
-                <li>
-                    <a class="ns-img" href="img/2.jpg"></a>
-                    <div class="caption">Pre-Wedding View </div>
-                </li>
-              
-                <li>
-                    <a class="ns-img" href="img/3.jpg"></a>
-                    <div class="caption">Pre-Wedding View </div>
-                </li>
-              
-                <li>
-                    <a class="ns-img" href="img/4.jpg"></a>
-                    <div class="caption">Pre-Wedding View </div>
-                </li>
-               
-                <li>
-                    <a class="ns-img" href="img/5.jpg"></a>
-                    <div class="caption">Pre-Wedding View </div>
-                </li>
-                
-            </ul>
-            <div class="navsWrapper">
-                <div id="ninja-slider-prev"></div>
-                <div id="ninja-slider-next"></div>
+	 <section id="myCarousel" class="carousel slide">
+        <!-- Indicators 
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>-->
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" >
+                	<img src="img/1.jpg" alt="" >
+                </div>
+                <div class="carousel-caption">
+                    <h2>Prewedding</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" >
+                	<img src="img/2.jpg" alt="" >
+                </div>
+                <div class="carousel-caption">
+                    <h2>Prewedding</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill">
+                	<img src="img/3.jpg" alt="" >
+                </div>
+                <div class="carousel-caption">
+                    <h2>Prewedding</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill">
+                	<img src="img/4.jpg" alt="" >
+                </div>
+                <div class="carousel-caption">
+                    <h2>Prewedding</h2>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill">
+                	<img src="img/5.jpg" alt="" >
+                </div>
+                <div class="carousel-caption">
+                    <h2>Prewedding</h2>
+                </div>
             </div>
         </div>
-    </div>
-		
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </section>
+	<section class="main-gal">
+		<h1><span>Photography</span></h1>
+		<div class="contain-gal">
+			<div class="photo-gal">
+				<img src="img/1.jpg" alt="" id="myImg">
+			</div>
+			<div class="photo-gal">
+				<img src="img/2.jpg" alt="" id="myImg1">
+			</div>
+			<div class="photo-gal">
+				<img src="img/3.jpg" alt="" id="myImg2">
+			</div>
+
+			
+
+		</div>
+		<div class="contain-gal">
+			
+			<div class="photo-gal">
+				<img src="img/4.jpg" alt="" id="myImg3">
+			</div>
+			<div class="photo-gal">
+				<img src="img/5.jpg" alt="" id="myImg4">
+			</div>
+			<div class="photo-gal">
+				<img src="img/6.jpg" alt="" id="myImg5">
+			</div>
+			
+		</div>
+		<h1><a href="#" class="btn-gal">See More</a></h1>
 	</section>
+	<section class="main-event">
+		<h1><span>Events</span></h1>
+		<div class="contain-event">
+			<div class="photo-event">
+				<img src="img/1.jpg" alt="" id="myevent">
+			</div>
+			<div class="photo-event">
+				<img src="img/2.jpg" alt="" id="myevent1">
+			</div>
+			<div class="photo-event">
+				<img src="img/3.jpg" alt="" id="myevent2">
+			</div>
+			<div class="photo-event">
+				<img src="img/4.jpg" alt="" id="myevent3">
+			</div>
+
+		</div>
+		
+		<h1><a href="#" class="btn-event">See More</a></h1>
+	</section>
+<section class="main-gift">
+		<h1><span>Photo Gift</span></h1>
+		<div class="contain-gift">
+             
+              
+              
+              <div id="owl-demo" class="owl-carousel craosel-responsive">
+                <div class="item"><img src="img/e11.jpg" alt="blue star"></div>
+                <div class="item"><img src="img/e12.jpg" alt="samsung"></div>
+                <div class="item"><img src="img/e13.jpg" alt="voltas"></div>
+                <div class="item"><img src="img/e4.jpg" alt="unique"></div>
+                <div class="item"><img src="img/e5.jpg" alt="hitachi"></div>
+                <div class="item"><img src="img/e6.jpg" alt="iit"></div>
+                 <div class="item"><img src="img/e7.jpg" alt="blue bird"></div>
+                  <div class="item"><img src="img/e8.jpg" alt="dell"></div>
+                  <div class="item"><img src="img/e9.jpg" alt="infosys"></div>
+                    <div class="item"><img src="img/e10.jpg" alt="lifestyle"></div>
+              
+              </div>
+              
+           
+           </div>
+           <h1><a href="#" class="btn-event">See More</a></h1>
+       </section>
 	<footer>
 		<div class="logo-f">
 			<img src="img/logo1.jpg">
@@ -113,5 +220,186 @@ Opposite Bus Stand, Narnaul-123001</span></p>
 			<p><i class="far fa-envelope"></i><span>dalicreationsonline@gmail.com</span></p>
 		</div>
 	</footer>
+	<span class="scroll-up"><i class="fas fa-angle-up"></i></span>
+	<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  
+</div>
+<script src="js/jquery.js"></script>
+	<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var ct = document.getElementsByClassName("photo-gal")[0];
+var ct1 = document.getElementsByClassName("photo-gal")[1];
+var ct2 = document.getElementsByClassName("photo-gal")[2];
+var ct3 = document.getElementsByClassName("photo-gal")[3];
+var ct4 = document.getElementsByClassName("photo-gal")[4];
+var ct5 = document.getElementsByClassName("photo-gal")[5];
+
+
+var img = document.getElementById("myImg");
+var img1 = document.getElementById("myImg1");
+var img2 = document.getElementById("myImg2");
+var img3 = document.getElementById("myImg3");
+var img4 = document.getElementById("myImg4");
+var img5 = document.getElementById("myImg5");
+var modalImg = document.getElementById("img01");
+
+ct.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img.src;
+  
+}
+ct1.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img1.src;
+  
+}
+ct2.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img2.src;
+  
+}
+ct3.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img3.src;
+  
+}
+ct4.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img4.src;
+  
+}
+ct5.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = img5.src;
+  
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+	 <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+
+
+var cte = document.getElementsByClassName("photo-event")[0];
+var cte1 = document.getElementsByClassName("photo-event")[1];
+var cte2 = document.getElementsByClassName("photo-event")[2];
+var cte3 = document.getElementsByClassName("photo-event")[3];
+var cte4 = document.getElementsByClassName("photo-event")[4];
+var cte5 = document.getElementsByClassName("photo-event")[5];
+var event = document.getElementById("myevent");
+var event1 = document.getElementById("myevent1");
+var event2 = document.getElementById("myevent2");
+var event3 = document.getElementById("myevent3");
+var event4 = document.getElementById("myevent4");
+var event5 = document.getElementById("myevent5");
+
+var modalImg = document.getElementById("img01");
+cte.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event.src;
+  
+}
+cte1.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event1.src;
+  
+}
+cte2.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event2.src;
+  
+}
+cte3.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event3.src;
+  
+}
+cte4.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event4.src;
+  
+}
+cte5.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = event5.src;
+  
+}
+
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+    </script> 
+     <style>
+    #owl-demo .item{
+        margin: 3px;
+    }
+    #owl-demo .item img{
+        display: block;
+        width: 200px;
+        height: 250px;
+    }
+    </style>
+
+<script src="js/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        autoPlay: 3000,
+        items : 5,
+        itemsDesktop : [1199,3],
+        itemsDesktopSmall : [979,3],
+		 itemsMobile : [479, 1]
+      });
+
+    });
+    </script>
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".scroll-up").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 100) {
+      $(".scroll-up").css("display","block");
+      	
+      
+    } else {
+      $(".scroll-up").css("display","none");
+    }
+  });
+});
+</script>
 </body>
 </html>
