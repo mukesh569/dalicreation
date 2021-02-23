@@ -1,0 +1,395 @@
+*{ margin:0%; padding: 0%; box-sizing: border-box;font-family: 'Copperplate Gothic'; 
+  text-transform: capitalize; }
+:root{ 
+	--black:#000100;
+	--white:#ffffff;
+	--yellow:#fff100;
+
+}
+a,a:hover{text-decoration: none;}
+html{font-size: 62.5%;}
+body{position: relative;}
+.mobile-menu{ display: none; }
+
+.fx-header{ margin-top: 10rem !important; }
+/************************************** start Full  Home Page ****************************************/
+/************************ start header ****************************************/
+.fixed-header{ position: fixed; top:0;left:0; z-index: 9; }
+#header{width:100%;height:10rem;background:var(--black);overflow:hidden;display:flex;z-index: 99;
+     justify-content:space-around; align-items: center; border-bottom: .5rem solid var(--white);}
+#header .logo{ width:30%; padding:2rem; }
+#header .logo img{ width:10rem; height:7rem; }
+#header nav{width:70%; position: relative;}
+#header nav ul{display: flex;   justify-content:space-around; align-items: center;}
+#header nav ul li a{ color: #fff; font-size: 1.7rem; text-transform: uppercase;  
+      position: relative;transition: all .2s linear; font-weight: bold; letter-spacing: 1px; }
+#header  nav ul li a:before{ content: ''; position: absolute; width:0%; height: .2rem; bottom: -10%;
+     background: #fff100; transition: all .5s linear;  }
+#header  nav ul li a:hover:before{ width: 100%; }
+#header  nav ul li:last-child a{ border:1px solid #fff100; padding: 1.2rem 3rem;color: #fff100; }
+#header  nav ul li:last-child a:hover{ background: #fff100; color: #000; }
+#header  nav ul li a:hover{ color: #fff100; }
+#header  nav ul li:last-child a:before{ display: none; }
+/************************ End header ****************************************/
+/************************ start home slider ****************************************/
+.carousel-caption { position: absolute; top: 40%; left: 50%;transform: translate(-50%, -50%);z-index: 10;color: #fff;
+    font-size: 3.5rem;text-align: center; text-shadow: 0 1px 2px rgb(0 0 0 / 60%); width: 100%;text-align: center;}
+.carousel,.carousel .item,.active {  height:  calc(100vh - 10rem);}
+.carousel-inner {  height: calc(100vh - 10rem);}
+.fill { width: 100%;  height: 100%; background-position: center; -webkit-background-size: cover; -moz-background-size: cover;
+    background-size: cover;  -o-background-size: cover;  animation: zoom .2s linear;  position: relative;}
+.fill img{ width:100%; height: 100%; position: relative; z-index: 0; }
+.fill:before{content: ''; position: absolute; top:0; left: 0; background: rgba(0,0,0,0.4); width: 100%; height: 100%; z-index: 1;}
+.active .fill img {animation: zoomimg 4s linear;}
+@keyframes zoomimg 
+{
+    0%{transform: scale(1) }
+    50%{transform: scale(1.2) rotate(5deg);;}
+    100%{transform: scale(1.3) rotate(7deg);;}
+}
+/************************ end  home slider ****************************************/
+/************************start Home Decoration ***********************************/
+.main-Dec {border-bottom:2px solid #fff100;background: #fff;width: 100%;padding: 2rem; display: flex; flex-direction: column;}
+.main-Dec h1 {display: flex; justify-content: center;}
+.main-Dec h1 span{ text-align: center; color: #000100;font-size: 6rem; line-height: 10rem; position: relative;margin-bottom: 3rem;}
+.main-Dec h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #fff100;left:0; bottom:0; } 
+.main-Dec .contain-Dec{display: flex;width: 100%;margin: 0 auto;flex-wrap: wrap; justify-content: space-between; }
+.main-Dec .photo-Dec{ width: 24%; margin: 1rem 0;    border: 10px solid #000100; cursor: pointer;
+  overflow: hidden; position: relative;z-index: 0; border-radius: 15px;min-height: 22rem;
+    max-height: 30rem;}
+.main-Dec .photo-Dec img{ min-height: 100%; transition: all .2s linear; position: relative; width: 100%;}
+.main-Dec .photo-Dec:before{ content: 'Click Here'; top:0; right:-100%;width:0%; height: 100%; 
+background: rgba(0,0,0,0.6); position: absolute; z-index: 1;transition: all .2s linear;
+display: flex; justify-content: center; align-items: center; color: #fff; font-size: 3rem;
+text-transform: uppercase;}
+.main-Dec .photo-Dec:hover > img { transform: scale(1.5);   }
+.main-Dec .photo-Dec:hover:before{width: 100%; right:0;}
+.btn-Dec{padding:0.8rem 2rem; border:.2rem solid #000100; background:transparent;color:#000; 
+  font-size: 1.9rem;position:relative;margin:2rem 0;z-index: 0;overflow:hidden;border-radius: .5rem;}
+.btn-Dec:before{content: ''; width:100%; height: 100%; top:0;left:0; position: absolute; z-index: -1;
+background: #000100; transform: translateX(-200%);transition: all .2s linear;}
+.btn-Dec:hover:before{transform: translateX(0%);}
+.btn-Dec:hover{color:#fff100;}
+/*************************end Home Decoration**************************************/
+/************************start Home Photography ***********************************/
+.main-phy { border-top:2px solid #fff100;border-bottom:2px solid #fff100; background: #000100; 
+ width: 100%;   padding: 2rem;   display: flex;   flex-direction: column;}
+.main-phy h1 {display: flex; justify-content: center;}
+.main-phy h1 span{ text-align: center; color: #fff100;  font-size: 6rem; line-height: 10rem; 
+  position: relative;  margin-bottom: 3rem;}
+.main-phy h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #fff; 
+  left:0; bottom:0; } 
+.main-phy .contain-phy{display: flex;width: 100%;margin: 0 auto;flex-wrap: wrap; 
+  justify-content: space-between; background: var(--black); }
+.main-phy .contain-phy .photo-phy{width:24%;margin:1rem 0;border:10px solid #fff;cursor:pointer;
+  overflow:hidden;position:relative;z-index:0;border-radius:15px;min-height:20rem;max-height:30rem;}
+.main-phy .contain-phy .photo-phy img{ min-height: 100%; transition: all .2s linear; position: relative;width: 100%;}
+.main-phy .contain-phy .photo-phy:before{ content: 'view'; top:0; left:-100%;width:0%; height: 100%; 
+background: rgba(255,241,0,0.4); position: absolute; z-index: 1;transition: all .2s linear;
+display: flex; justify-content: center; align-items: center; color: #000; font-size: 4rem;
+text-transform: uppercase;}
+.main-phy .contain-phy .photo-phy:hover > img { transform: scale(1.5) rotate(-10deg);   }
+.main-phy .photo-phy:hover:before{width: 100%; left:0;}
+.btn-phy{padding:0.8rem 2rem;border:.2rem solid #fff100;background:transparent;color:#fff;font-size:1.9rem; 
+ position: relative;  margin: 1rem 0; z-index: 0; overflow: hidden; border-radius: .5rem;}
+.btn-phy:before{content: ''; width:100%; height: 100%; top:0;left:0; position: absolute; z-index: -1;
+background: #fff100; transform: translateX(-200%);transition: all .2s linear;}
+.btn-phy:hover:before{transform: translateX(0%);}
+.btn-phy:hover{color:#000;}
+/************************end Home Photography ************************************/
+/************************start Home Event ***************************************/
+.main-event {border-bottom:2px solid #fff100;background: #fff;width: 100%;padding: 2rem; display: flex; flex-direction: column;}
+.main-event h1 {display: flex; justify-content: center;}
+.main-event h1 span{ text-align: center; color: #000100;font-size: 6rem; line-height: 10rem; position: relative;margin-bottom: 3rem;}
+.main-event h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #fff100;left:0; bottom:0; } 
+.main-event .contain-event{display: flex;width: 100%;margin: 0 auto;flex-wrap: wrap;justify-content:space-between; }
+.main-event .photo-event{ width: 24%; margin: 1rem 0;    border: 10px solid var(--yellow); cursor: pointer;
+  overflow: hidden; position: relative;z-index: 0; border-radius: 15px;min-height: 20rem;max-height: 30rem;}
+.main-event .photo-event img{ min-height: 100%; transition: all .2s linear; position: relative; width: 100%;}
+.main-event .photo-event:before{ content: 'View'; top:-100%; right:0%;width:0%; height: 100%; 
+background: rgba(255,255,255,0.6); position: absolute; z-index: 1;transition: all .2s linear;
+display: flex; justify-content: center; align-items: center; color:var(--black); font-size: 3rem;
+text-transform: uppercase;}
+.main-event .photo-event:hover > img { transform: scale(1.5) rotate(-10deg);   }
+.main-event .photo-event:hover:before{width: 100%; top:0;}
+.btn-event{padding:0.8rem 2rem;border:.2rem solid #000100;background:transparent;color:#000;font-size:1.9rem; 
+ position: relative;  margin: 2rem 0; z-index: 0; overflow: hidden; border-radius: .5rem;}
+.btn-event:before{content: ''; width:100%; height: 100%; top:0;left:0; position: absolute; z-index: -1;
+background: #000100; transform: translateY(-200%);transition: all .2s linear;}
+.btn-event:hover:before{transform: translateY(0%);}
+.btn-event:hover{color:#fff100;}
+/************************end Home Event ***************************************/
+/************************start Home Photo-gift ********************************/
+.main-gift { border-bottom:2px solid #fff100; background: #fff100;width: 100%;padding: 2rem;display: flex;flex-direction: column;}
+.main-gift h1 {display: flex; justify-content: center;}
+.main-gift h1 span{text-align: center;color: #000100;font-size: 6rem;line-height: 10rem;position: relative;margin-bottom: 3rem;}
+.main-gift h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #000; left:0; bottom:0; }
+.btn-gift{padding:0.8rem 2rem;border:.2rem solid #000100;background:transparent;color:#000;font-size:1.9rem; 
+ position: relative;  margin: 2rem 0; z-index: 0; overflow: hidden; border-radius: .5rem;}
+.btn-gift:before{content: ''; width:100%; height: 100%; top:0;left:0; position: absolute; z-index: -1;
+background: #000100; transform: translateY(200%);transition: all .2s linear;}
+.btn-gift:hover:before{transform: translateY(0%);}
+.btn-gift:hover{color:#fff100;}
+.service-wrapper{  width:100%;}
+.service-box{  width:1170px; margin:0 auto;   padding-top:10px;   padding-bottom:10px;}
+.service-block{   padding-top:10px;}
+.owl-carousel .owl-wrapper:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+/* display none until init */
+.owl-carousel{display: none;position: relative;width: 100%; -ms-touch-action: pan-y;}
+ .craosel-responsive{ padding:0px; }
+.owl-carousel .owl-wrapper{ display: none;  position: relative; -webkit-transform: translate3d(0px, 0px, 0px);}
+.owl-carousel .owl-wrapper-outer{ overflow: hidden; position: relative; width: 100%;}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+  
+.owl-carousel .owl-item{float: left;}
+.owl-controls .owl-page,.owl-controls .owl-buttons div{ cursor: pointer;}
+.owl-controls { -webkit-user-select: none;  -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none;
+  user-select: none;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); display:none !important;
+  ;}
+.grabbing {     cursor:url(grabbing.png) 8 8, move;}
+.owl-carousel  .owl-wrapper,.owl-carousel  .owl-item{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+  #owl-demo .item{   margin: 3px;   }
+  #owl-demo .item img{      display: block;     width: 200px;    height: 250px; } 
+@media (min-width: 768px) and (max-width: 991px) {
+ .craosel-responsive{ padding-left:10px;  padding-left:10px; }
+.service-box{   width:auto;   margin:0 auto;    padding-left:10px;    padding-right:10px;}
+.service-block{   padding-top:10px; height:auto;  padding-bottom:10px;  padding-left:30px;} 
+}
+@media (max-width: 767px) {
+.service-box{   width:auto;    padding-left:10px;    padding-right:10px;}
+.service-block{  padding-top:10px;  height:auto;  padding-bottom:10px;  padding-left:70px;  padding-bottom:20px;}
+}
+
+@media (max-width: 480px) {
+ .craosel-responsive{ padding-left:50px; padding-left:50px; }
+}
+@media (max-width: 360px) {
+ .craosel-responsive{ padding-left:50px; padding-left:50px;}
+}
+@media (max-width: 320px) {
+ .craosel-responsive{ padding-left:50px; padding-left:50px;}
+}
+
+/************************End Home Photo-gift *********************************/
+/************************Start Home footer **********************************/
+footer{width:100%;overflow: hidden;  display: flex; justify-content:space-around; background: #000100;color:#fff;
+        padding:3rem 3rem 0;}
+footer h3{color: #fff100; font-weight: bold; font-size:2rem; line-height: 3rem;margin-bottom: 2rem;
+          text-transform: uppercase; letter-spacing: 1px;}
+footer .logo-f { width:25%;  margin-right: 2rem;}
+footer .logo-f img{ width:50%; }
+footer .links{width:25%; margin-right: 2rem;}
+footer .links a{ color: #fff; font-size: 2rem; font-size:1.3rem; text-transform: uppercase; line-height: 30px; 
+          display: block;transition: all .2s linear;}
+footer .links a:hover{color: #fff100;}
+footer .social{width: 25% ; margin-right: 2rem;}
+footer .social ul{ display: flex; }
+footer .social ul li {width: 5rem;  height: 5rem; list-style: none;margin-right: 2rem;}
+footer .social ul li a{  width:inherit;height: inherit;border-radius: 50%;display: flex;justify-content: center;
+  align-items: center;background: #fff;position: relative;overflow: hidden; } 
+footer .social ul li a i{ transition: all .7s linear;font-size: 2rem; line-height: 5rem;}
+footer .fa-facebook-f{ color: #4267B2; }
+footer .fa-youtube{ color: #FF0000; }
+footer .fa-instagram-square{ color:#E1306C; }
+footer .fa-twitter{ color: #1DA1F2; }
+footer .social ul li a::before{content: " "; background:var(--yellow); position: absolute; width: 120%; 
+                         height: 110%; top:90%;left:-50%; transform: rotate(60deg);   }
+footer .social ul li a:hover i{ transform: scale(1.6);color:var(--black); }
+footer .social ul li a:hover:before{ animation: social 1s linear 1;  animation-fill-mode: forwards; }
+footer .contact{width: 25%;  }
+footer .contact p{ width: 100%; margin-bottom: 1rem; }
+footer .contact i {width: 10%;display: inline-block;vertical-align: top;font-size: 1.5rem;color: #fff100;
+  line-height: 2rem;}
+footer .contact span{width:90%; display: inline-block;font-size: 1.5rem; }
+@keyframes social{
+      0%{top:-50%;left:7%;}
+      50%{top:-10%;left:0%;}
+      100%{top:3%;left:-8%;}
+    }
+/************************End Home footer ***********************************/
+/************************************** End Full  Home Page ****************************************/
+/*********************** Start Full  PhotoGraphy Page *************************************/
+.main-Phtgra { background: var(--black);  border-bottom: .2rem solid var(--yellow);
+ width: 100%;   padding: 2rem  0;   display: flex;   flex-direction: column;    min-height: calc(100vh - 10rem);}
+.main-Phtgra h1 {display: flex; justify-content: center;}
+.main-Phtgra h1 span{ text-align: center; color: #fff100;  font-size: 6rem; line-height: 10rem; 
+  position: relative;  margin-bottom: 3rem;}
+.main-Phtgra h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #fff; 
+  left:0; bottom:0; } 
+.contain-Phtgra{display: flex;width: 100%;margin: 0 auto;flex-wrap: wrap; 
+  justify-content: space-between; background: var(--black); 
+  padding:2rem; }
+.photo-Phtgra{ width: 24%; margin: 1rem 0;    border: 5px solid #fff; cursor: pointer;
+  overflow: hidden; position: relative;z-index: 0; border-radius: 15px; position: relative; 
+  min-height: 20rem; max-height: 30rem; overflow: hidden;}
+.photo-Phtgra img{ height: 100%;
+    transition: all .2s linear;
+    position: relative;
+    width: auto;}
+.photo-Phtgra .content-hover{top:0; left:0%;width:100%; height: 100%; 
+background: rgba(255,241,0,0.7); position: absolute; z-index: 1;transition: all .2s linear;
+display: flex; justify-content: center; align-items: center; color: #000; font-size: 3rem; font-weight: bold;
+text-transform: uppercase; text-align: center;}
+.photo-Phtgra:hover > .content-hover{ transform: translateY(-100%); }
+.photo-Phtgra:hover img { transform: scale(1.5) rotate(-10deg);   }
+/*********************** End Full  PhotoGraphy Page *************************************/
+/*********************** Start All PhotoGraphy Page *************************************/
+.photo-container { background: #000100; width: 100%; margin: auto;display: flex;justify-content: center;
+    flex-direction: column;  align-items: center;}
+.photo-container { background: var(--black);  border-bottom: .2rem solid var(--yellow);
+ width: 100%;   padding: 2rem  0;   display: flex;   flex-direction: column;    min-height: calc(100vh - 10rem);}
+.photo-container h1 {display: flex; justify-content: center;}
+.photo-container h1 span{ text-align: center; color: #fff100;  font-size: 6rem; line-height: 10rem; 
+  position: relative;  margin-bottom: 3rem;}
+.photo-container h1 span:before{ content: ''; position: absolute; width:100%; height: 2px; background: #fff; 
+  left:0; bottom:0; } 
+#myBtnContainer{ width:100%; background: #fff100; padding: 2rem;  display: flex; justify-content: center;
+margin-bottom: 2rem;}
+.pic-containter { width:100%;  }
+.Pic-column { float: left; width: 23%; display: none; height: 30rem; overflow: hidden;
+  margin:1%;   border:.6rem solid #fff; cursor: pointer;}
+.content { color: #fff; width:100%;height: 100%; position: relative;}
+
+.show { display: block;}
+.btn-photo{padding:0.8rem 2rem;border:.2rem solid #000100;background:#000100;color:#fff;
+  font-size:2rem;  font-weight: bold;
+ position: relative;  margin: 2rem 1rem; z-index: 0; overflow: hidden; border-radius: .5rem;}
+.btn-photo:before{content: ''; width:100%; height: 100%; top:0;left:0; position: absolute; z-index: -1;
+background: #fff; transform: translateY(-200%);transition: all .2s linear;}
+.btn-photo:hover:before{transform: translateY(0%);}
+.btn-photo:hover{color:#000100;}
+.btn-photo.myactive { background:transparent;  color: #000100;}
+.Pic-column  .content img{ height: 100%; transition: all .2s linear; position: relative; width:auto;}
+.Pic-column .content:before{  font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f00e";
+ top:-100%; left:0%;width:100%; height: 0%; 
+background: rgba(255,241,0,0.6); position: absolute; z-index: 1;transition: all .2s linear;
+display: flex; justify-content: center; align-items: center; color: #fff; font-size: 3rem;
+text-transform: uppercase;}
+.Pic-column .content:hover > img { transform: scale(1.5);   }
+.Pic-column .content:hover:before{height: 100%; top:0;}
+/*********************** End All PhotoGraphy Page *************************************/
+
+
+/***************************  start new contact page***********************************/
+#header-contact{width:100%; height: 40vh; background:var(--black); overflow: hidden;  display: flex; 
+	   justify-content:center; align-items: center; border-bottom: .5rem solid var(--white); flex-direction: column; border:none;}
+	   #header-contact .logo-c{         width: 40%;      text-align: center;}
+#header-contact .logo-c img{    width: 20rem;    height: 15rem; }
+#header-contact p{ color: var(--white);     font-size: 1.6rem; font-weight: bold; }
+.menu{background: var(--yellow); height: 25vh;  display: flex;  justify-content: center; align-items: center;}
+.menu  a{     background: var(--black); color: var(--white);padding: 1% 2%;font-size: 2rem;
+    margin: 0 .5rem;   width: 20rem;   text-align: center;  border-radius: 10px;  font-weight: bold; transition: all .2s;
+    border:.2rem solid var(--black);}
+.menu  a:hover{ background: transparent; color: var(--black); }
+.footer-contact{ width: 100%; display: flex; justify-content: space-around;  align-items: center; height: 35vh; padding: 0 3rem; }
+.footer-contact article{width:70%; display: flex; justify-content: center; flex-direction: column;}
+.footer-contact article h2{ font-size: 3rem;color: var(--white); text-transform: capitalize; font-family: system-ui;
+ line-height: 6rem;}
+.footer-contact article h4{ font-size: 1.9rem;color: var(--white); text-transform: capitalize; font-family: system-ui; 
+	line-height: 4rem;}
+.footer-contact article p{ line-height: 2rem;color: var(--white);font-size: 1.5rem;text-transform: capitalize; font-family: system-ui; }
+.footer-contact aside{     width: 30%;    display: flex;   justify-content: flex-end;   align-items: flex-end; }
+.footer-contact aside a:hover i{ transform: scale(1.2); color: var(--black); background: var(--yellow);  }
+  .footer-contact aside a i{   width: 50px; transition: all .2s;  height: 50px;background: #fff; border-radius: 50%;
+    margin-left: 2rem;  display: flex;justify-content: center; align-items: center;}
+    /***************************  End new contact page***********************************/
+
+/********************************** start top scroll *****************************************/
+.scroll-up { cursor: pointer;width: 50px;height: 50px;background: #000;border-radius: 50%;position: fixed; z-index: 11;
+    bottom: 3%; right: 1%; text-align: center; color: #fff100; font-size: 3rem;line-height: 50px; box-shadow: 0px 0px 4px 4px #999;
+    opacity: 0.3;  transition: all .2s linear; display:none;}
+.scroll-up:hover{ opacity: 1; }
+
+
+
+
+/**********************************start 
+/*********************************mobile view********************** */
+@media screen and (max-width: 700px) and (min-width: 200px)
+{ body{font-family: 'Quicksand', sans-serif;}
+.carousel, .carousel .item, .active {
+  height: calc(100vh - 30rem);
+  overflow: hidden;
+}
+.main-Dec h1 span,.main-phy h1 span,.main-event h1 span,.main-gift h1 span,.main-Phtgra h1 span,
+.photo-container h1 span{ 
+  font-size: 3rem; line-height: 4rem;}
+.main-Dec .photo-Dec,.main-phy .contain-phy .photo-phy,.main-event .photo-event
+,footer .links,footer .social,footer .contact,.photo-Phtgra { width: 100%;}
+footer { flex-direction: column;}
+footer .logo-f {  width: 100%;text-align: center;}
+#myBtnContainer { padding: 1rem; display: block; justify-content: center;}
+.btn-photo {  padding: 0.8rem 1rem;  font-size: 1rem; margin: .4rem;}
+.Pic-column {  width: 96%;  margin: 2%;}
+  #header { overflow:visible;padding: 2.2rem;}
+  #header .logo { width: 80%;   padding: 2rem 0;}
+    #header nav {    width: 20%;    position: relative;}
+    #header nav:hover ul{ display: block; }
+   #header nav ul { display: none;width: 200px;right: 0;top: 70%;position: absolute;background: #000;
+  z-index: 9; padding-left: 2rem; box-shadow: 0px 0px 2px -1px #fff;  padding: 2rem;}
+
+    #header nav ul li{margin-bottom: 1rem;}
+    #header nav ul li a:hover::before { width: 90%;}
+    #header nav ul li:last-child a {padding: 0; color: #fff100;}
+    .carousel-caption {font-size: 1.5rem !important;}
+    .menu { height: 100%; flex-direction: column;}
+    #header-contact { height: 25vh;}
+    #header-contact .logo-c img {width: 11rem;  height: 7rem;}
+    .menu a {padding: 1rem 0%;  font-size: 2rem;  margin: 1rem .1rem; width: 90%;}
+    .footer-contact { height: 100%; flex-direction: column; padding: 0 1rem;}
+    .footer-contact article {width: 100%; padding: 2rem;}
+    .footer-contact aside {width: 100%; padding: 3rem 0;}
+    .contain-phy {  padding: 1rem;}
+    
+    .photo-phy,.photo-pre{width: 100%;border: none;}
+    #header-contact p { font-size: 1.2rem;}
+    .mobile-menu{display:block;text-align:right;color:#fff;font-size:3rem;line-height:10rem;cursor:pointer;width:3rem;float:right;}
+}
+@media only screen and (min-width: 500px){
+  .modal-content {   width: 100%; }
+}
+
+/*********************************tablet view********************** */
+@media screen and (max-width: 1040px) and (min-width: 701px)
+{
+  .main-Dec .photo-Dec,.main-phy .contain-phy .photo-phy,.main-event .photo-event
+,.photo-Phtgra  { width: 48%;}
+.main-Dec h1 span,.main-phy h1 span,.main-event h1 span,.main-gift h1 span,.main-Phtgra h1 span,
+.photo-container h1 span { font-size: 4rem; line-height: 7rem;}
+footer {  display: block;}
+footer .logo-f{  width: 100%;text-align: center;}
+footer .contact {  width: 100%;float:left;}
+footer .logo-f img { width: 19%;}
+footer .links,footer .social  { width: 47%; float: left;}
+#myBtnContainer {  padding: 0rem;}
+.btn-photo { padding: 0.8rem 1rem; font-size: 1.5rem; margin: 1rem;}
+.Pic-column { width: 31%; height: 25rem;}
+  #header { padding: 0 2rem; }
+  #header .logo { width: 20%;   padding: 2rem 0;}
+  #header nav {    width: 80%;    position: relative;}
+  #header nav ul li a{ font-size: 1.2rem; }
+  .carousel-caption {font-size: 2.5rem !important;}
+  .photo-phy {  width: 50%;}
+  .modal-content {width: 100%;height: 50vh;margin-top: 20vh;}
+  .carousel {   max-height: 70vw;}
+  .main-event h1 span,.main-gal h1 span,.main-gift h1 span{  font-size: 2rem; line-height: 4rem;}
+  .photo-event::before,.photo-gal::before { font-size: 2rem;} 
+  .photo-gal{ width: auto; }
+  .photo-event{ width: auto; } 
+   
+}
+
+
