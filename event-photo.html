@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Decoration - Photo</title>
+	<title>Event - Photo</title>
 	
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -48,7 +48,7 @@
   </nav>  
   </header>
 	<div class="photo-container fx-header">
-<h1><span>Decoration</span></h1>
+<h1><span>Event</span></h1>
 <div id="myBtnContainer">
   <button class="btn-photo myactive" onclick="filterSelection('all')">All Photo</button>
   <button class="btn-photo" onclick="filterSelection('DJ')">DJ</button>
@@ -59,21 +59,21 @@
 </div>
 
 <div class="pic-containter">
-  <div class="Pic-column JaiMala">
+  <div class="Pic-column JaiMala" onclick="myFunction(this);">
     <div class="content">
-      <img src="https://indusguru.net/img/daliEvent/e-1.jpg" alt="JaiMala" style="width:100%">
+      <img src="https://live.staticflickr.com/65535/50974680663_acc46f514c_k.jpg" alt="JaiMala" style="width:100%">
      
     </div>
   </div>
   <div class="Pic-column DJ">
-    <div class="content">
-      <h1>no DJ Photo</h1>
+    <div class="vcontent">
+     <iframe  src="https://www.youtube.com/embed/9vQBhnQUV04" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      
     </div>
   </div>
   <div class="Pic-column Dance">
-    <div class="content">
-      <h1>no Dance Photo</h1>
+    <div class="vcontent">
+      <iframe  src="https://www.youtube.com/embed/LS2La249jdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      
     </div>
   </div>
@@ -135,7 +135,12 @@ Opposite Bus Stand, Narnaul-123001</span></p>
             <p><i class="far fa-envelope"></i><span>dalicreationsonline@gmail.com</span></p>
         </div>
     </footer>
+     <div class="zoom-pic">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  </div>
    <span class="scroll-up"><i class="fas fa-angle-up"></i></span>
+   <a href="//api.whatsapp.com/send?phone=+919416606966&amp;text=Hi Dail Event" target="_blank" rel="nofollow" class="whatsappIconDiv"><img src="https://www.barcodeindia.com/public/images/wp-icon.png" alt="Whatsapp"></a>
   <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
